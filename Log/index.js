@@ -3,7 +3,6 @@ document.getElementById('LoginForm').addEventListener('submit', async function(e
 
     const formData = {
         username: document.getElementById('username').value,
-        email: document.getElementById('email').value,
         password: document.getElementById('password').value
     };
 
@@ -19,7 +18,8 @@ document.getElementById('LoginForm').addEventListener('submit', async function(e
         if (response.ok) {
             const data = await response.json();
             localStorage.setItem('token', data.token);
-            window.location.href = 'profile.html';
+            window.location.href = '';
+            alert('Login successful!');
         } else {
             alert('Login failed.');
         }

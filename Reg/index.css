@@ -26,6 +26,10 @@ body{
     color: #000;
 }
 
+.head a:hover{
+    text-decoration: underline;
+}
+
 .u{
     margin-left: 50px;
 }
