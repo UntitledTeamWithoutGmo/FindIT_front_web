@@ -7,7 +7,7 @@ document.getElementById('LoginForm').addEventListener('submit', async function(e
     };
 
     try {
-        const response = await fetch('https://your-java-server/api/auth/login', {
+        const response = await fetch('http://localhost:8080/api/users/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -18,7 +18,7 @@ document.getElementById('LoginForm').addEventListener('submit', async function(e
         if (response.ok) {
             const data = await response.json();
             localStorage.setItem('token', data.token);
-            window.location.href = '';
+            window.location.href = 'http://127.0.0.1:5500/Profile/index.html';
             alert('Login successful!');
         } else {
             alert('Login failed.');

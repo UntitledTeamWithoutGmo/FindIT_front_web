@@ -38,57 +38,48 @@ body{
     margin-left: 15px;
 }
 
+.Profile{
+    margin-top: 70px; /* Adjust the margin to place .Profile under .head */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px; /* Adjust the margin to place .header under .head */
-    height: 33%;
     width: 100%;
     border-bottom: 1px solid #d8d8d8;
-    position: absolute;
-    top: 50px; /* Height of .head */
-    left: 0;
-    right: 0;
+    padding-bottom: 20px;
 }
 
 .header img{
     width: 150px;
     height: 150px;
     border-radius: 50%;
-}
-
-.text{
-    font-size: 40px;
-    font-weight: bold;
-    color: #000;
-    font-family:"Champagne Royale";
-    padding-top: 15px;
-    text-align: center;
+    margin-bottom: 20px;
 }
 
 .text-profile{
-    font-size: 50px;
+    font-size: 24px;
     font-weight: bold;
-    color: #000;
-    font-family:"Catrinity";
+    color: #24292e;
     text-align: center;
-    margin-left: 50px;
-    padding-top: 15px;
+    margin-bottom: 10px;
 }
 
 .about-user{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
     gap: 10px;
-    margin-top: 20px; /* Add some margin to separate from .header */
 }
 
 .mini-text-profile{
-    font-size: 20px;
-    color: #000;
-    font-family:"Catrinity";
+    font-size: 16px;
+    color: #586069;
     text-align: center;
 }
 
