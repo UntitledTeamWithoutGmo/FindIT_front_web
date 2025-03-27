@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             document.getElementById('email').innerText = user.email;
         } else {
             alert('Failed to load profile.');
+            console.log(token);
         }
     } catch (error) {
         console.error('Error:', error);
