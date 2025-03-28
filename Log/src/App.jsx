@@ -43,7 +43,7 @@ function App() {
 
   return (
     <>
-      <div className="head">
+      {/*<div className="head">
         <div className="nav">
           Find It
           <a href="" className="u">Home</a>
@@ -52,17 +52,17 @@ function App() {
           <a href="" className="k">Login</a>
           <a href="" className="k">For recruiters</a>
         </div>
-      </div>
+      </div>*/}
       <br />
       <div className="Login">
         <form onSubmit={handleSubmit}>
-          <p className="text">Find It</p>
+          <p className="text">Войти в аккаунт</p>
           <input
             type="text"
             className="input"
             id="username"
             name="username"
-            placeholder="Enter your username"
+            placeholder="Никнейм"
             value={formData.username}
             onChange={handleChange}
             required
@@ -72,18 +72,19 @@ function App() {
             className="input"
             id="password"
             name="password"
-            placeholder="Enter your password"
+            placeholder="Пароль"
             value={formData.password}
             onChange={handleChange}
             required
           />
-          <button className="btn" id="submit" type="submit">Submit</button>
-          <div className="have login">
+          <button className="btn" id="submit" type="submit">Войти</button>
+          {/*<div className="have login">
             <span className="mini-text">
               Don't have an account?
               <a href="">Sign up</a>
             </span>
-          </div>
+          </div>*/}
+          <div className="mini-text">© 2025 FindIt</div>
         </form>
       </div>
     </>
