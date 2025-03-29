@@ -30,7 +30,7 @@ function App() {
       if (response.ok) {
         const data = await response.json();
         localStorage.setItem('token', data.token);
-        window.location.href = 'http://127.0.0.1:5500/Profile/index.html';
+        window.location.href = 'http://localhost:5173/index.html';
         alert('Login successful!');
       } else {
         alert('Login failed.');
