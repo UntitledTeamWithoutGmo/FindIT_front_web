@@ -39,7 +39,6 @@ function Prof() {
         // First, try fetching the user profile
         let response = await fetch('http://localhost:8080/api/users/profile', {
           method: 'GET',
-          mode: 'no-cors',
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -53,7 +52,6 @@ function Prof() {
           // If user profile fails, try fetching the recruiter profile
           response = await fetch('http://localhost:8080/api/recruiters/profile', {
             method: 'GET',
-            mode: 'no-cors',
             headers: {
               Authorization: `Bearer ${token}`,
             },

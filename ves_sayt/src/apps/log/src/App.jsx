@@ -21,7 +21,6 @@ function Log() {
     try {
       const response = await fetch('http://localhost:8080/api/users/login', {
         method: 'POST',
-        mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
         },

@@ -21,7 +21,6 @@ function LogRecruiters() {
     try {
       const response = await fetch('http://localhost:8080/api/recruiters/login', {
         method: 'POST',
-        mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
         },

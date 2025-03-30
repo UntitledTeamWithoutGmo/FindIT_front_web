@@ -26,7 +26,6 @@ function App() {
     try {
       const res = await fetch('http://localhost:8080/api/recruiters/register', {
         method: 'POST',
-        mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
         },

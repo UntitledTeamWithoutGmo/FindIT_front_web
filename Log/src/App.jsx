@@ -21,7 +21,6 @@ function App() {
     try {
       const response = await fetch('http://localhost:8080/api/users/login', {
         method: 'POST',
-        mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
         },
@@ -31,7 +30,7 @@ function App() {
       if (response.ok) {
         const data = await response.json();
         localStorage.setItem('token', data.token);
-        window.location.href = 'http://localhost:5173/index.html';
+        window.location.href = 'http://localhost:6001/index.html';
         alert('Login successful!');
       } else {
         alert('Login failed.');
