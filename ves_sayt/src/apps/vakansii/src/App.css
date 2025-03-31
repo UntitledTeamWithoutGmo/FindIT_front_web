@@ -1,7 +1,13 @@
 body{
-  /*background-image: url(./assets/bg.png);*/
-  background: linear-gradient(to bottom, rgb(151, 229, 255), blue);
+  background-color: #ffffff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   font-family: Arial, sans-serif; /* Change font to a simpler style */
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
 }
 
 .head{
@@ -272,8 +278,8 @@ body{
     display: grid;
     border-radius: 20px;
     border: 1px solid#54b7fd;
-    background-color: #54b7fd;
-    color: #fff;
+    background-color: #ffffff;
+    color: #54b7fd;
     font-weight: normal;
     font-size: 20px;
     cursor: pointer;
@@ -281,6 +287,18 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.btn:hover{
+    background-color: #54b7fd;
+    color: #ffffff;
+}
+
+.mini-text{
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+    color: #747373;
 }
 
 .vacancies-container {
@@ -293,8 +311,8 @@ body{
 }
 
 .vacancies-header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  /*justify-content: space-between;*/
   align-items: center;
   margin-bottom: 20px;
 }
@@ -302,10 +320,17 @@ body{
 .vacancies-header h1 {
   font-size: 24px;
   font-weight: bold;
+  text-align: center;
 }
 
 .vacancies-header p {
   font-size: 16px;
+  color: #555;
+  text-align: right;
+}
+
+.vacancies-header hr {
+  width: 100%;
   color: #555;
 }
 
@@ -317,16 +342,11 @@ body{
 
 .vacancy-card {
   display: flex;
-  background-color: #fff;
+  background-image: url(./assets/ofic.jpg);
+  background-size: 100%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-}
-
-.vacancy-image {
-  width: 200px;
-  height: 150px;
-  object-fit: cover;
 }
 
 .vacancy-content {
@@ -386,10 +406,11 @@ body{
   gap: 10px;
 }
 
-.btn1 {
+.btn {
   padding: 8px 12px;
   border: none;
-  border-radius: 5px;
+  width: 150px;
+  border-radius: 15px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -397,28 +418,16 @@ body{
   font-size: 14px;
 }
 
-.btn1.blue {
-  background-color: #009dff;
+.btn.blue {
+  background-color: #1100ff;
 }
 
-.btn1.green {
+.btn.green {
   background-color: #28a745;
 }
 
-.btn1:hover {
+.btn:hover {
   opacity: 0.9;
-}
-
-.btn:hover{
-    background-color: #54b7fd;
-    color: #ffffff;
-}
-
-.mini-text{
-    font-size: 14px;
-    text-align: center;
-    margin-top: 15px;
-    color: #747373;
 }
 
 @font-face {
