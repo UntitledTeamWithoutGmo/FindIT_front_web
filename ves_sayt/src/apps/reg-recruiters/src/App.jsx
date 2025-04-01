@@ -9,7 +9,7 @@ function RegRecruiters() {
     patronymicName: '',
     email: '',
     password: '',
-    Organization: '',
+    organizationName: '',
   });
 
   const handleChange = (e) => {
@@ -119,9 +119,8 @@ function RegRecruiters() {
             className="input"
             id="OrganizationName"
             placeholder="Название Организации"
-            value={formData.Organization}
+            value={formData.organizationName}
             onChange={handleChange}
-            required
           />
           <button className="btn" type="submit">Зарегистрироваться</button>
           {/*<div className="have login">

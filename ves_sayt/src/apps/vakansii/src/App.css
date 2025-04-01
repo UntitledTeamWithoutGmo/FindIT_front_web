@@ -321,6 +321,7 @@ body{
   font-size: 24px;
   font-weight: bold;
   text-align: center;
+  color: #fff;
 }
 
 .vacancies-header p {
@@ -361,6 +362,7 @@ body{
   font-size: 18px;
   font-weight: bold;
   margin: 0;
+  color: #fff;
 }
 
 .vacancy-description {
@@ -406,7 +408,7 @@ body{
   gap: 10px;
 }
 
-.btn {
+.btn1 {
   padding: 8px 12px;
   border: none;
   width: 150px;
@@ -418,15 +420,15 @@ body{
   font-size: 14px;
 }
 
-.btn.blue {
+.btn1.blue {
   background-color: #1100ff;
 }
 
-.btn.green {
+.btn1.green {
   background-color: #28a745;
 }
 
-.btn:hover {
+.btn1:hover {
   opacity: 0.9;
 }
 

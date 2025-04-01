@@ -31,7 +31,25 @@ function Vakansii() {
       },
     ];
     setVacancies(mockData);
+    /*fetch("http://localhost:8080/api/vacancy/all")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log("Данные с сервера:", data); // Для отладки
+      setVacancies(data);
+    })
+    .catch((error) => console.error("Ошибка загрузки вакансий:", error));*/
   }, []);
+
+  const handleMoreDetails = (id) => {
+    localStorage.setItem("id", id);
+    window.location.href = "http://localhost:6001/about-vacanci";
+    console.log(id);
+  }
 
   return (
     <div className="vacancies-page">
@@ -60,6 +78,9 @@ function Vakansii() {
                   <a href={`http://localhost:8080/api/vacancy/call/${vacancy.id}`} className="btn1 blue">
                     Отликнуться
                   </a>
+                  <button onClick={() => handleMoreDetails(vacancy.id)} className="btn1 blue">
+                    Подробнее
+                  </button>
                 </div>
               </div>
             </div>

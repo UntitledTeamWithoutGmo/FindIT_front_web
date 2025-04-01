@@ -19,7 +19,7 @@ function LogRecruiters() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:8080/api/recruiters/login', {
+      const response = await fetch('http://localhost:8080/api/recruiter/jwt', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ function LogRecruiters() {
       if (response.ok) {
         const data = await response.json();
         localStorage.setItem('token', data.token);
-        window.location.href = 'http://localhost:5173/index.html';
+        window.location.href = 'http://localhost:6001/prof';
         alert('Login successful!');
       } else {
         alert('Login failed.');

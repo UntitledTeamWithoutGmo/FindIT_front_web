@@ -8,22 +8,14 @@ import Reg from './apps/reg/src/App';
 import LogRecruiters from './apps/log-recruiters/src/App';
 import RegRecruiters from './apps/reg-recruiters/src/App';
 import Vakansii from './apps/vakansii/src/App';
+import MainPage from './apps/main-page/src/App';
+import AboutVacanci from './apps/about-vacanci/src/App';
 
 function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li><Link to="/log">Login</Link></li>
-            <li><Link to="/prof">Profile</Link></li>
-            <li><Link to="/reg">Registration</Link></li>
-            <li><Link to="/log-recruiters">Login for Recruiters</Link></li>
-            <li><Link to="/reg-recruiters">Registration for Recruiters</Link></li>
-            <li><Link to="/vakansii">Vakansii</Link></li>
-          </ul>
-        </nav>
-
+    
         <Routes>
           <Route path="/log" element={<Log />} />
           <Route path="/prof" element={<Prof />} />
@@ -31,6 +23,8 @@ function App() {
           <Route path="/log-recruiters" element={<LogRecruiters />} />
           <Route path="/reg-recruiters" element={<RegRecruiters />} />
           <Route path="/vakansii" element={<Vakansii />} />
+          <Route path="/main-page" element={<MainPage />} />
+          <Route path="/about-vacanci" element={<AboutVacanci />} />
         </Routes>
       </div>
     </Router>

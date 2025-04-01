@@ -30,7 +30,7 @@ function Log() {
       if (response.ok) {
         const data = await response.json();
         localStorage.setItem('token', data.token);
-        window.location.href = 'http://localhost:5173/index.html';
+        window.location.href = 'http://localhost:6001/prof';
         alert('Login successful!');
       } else {
         alert('Login failed.');

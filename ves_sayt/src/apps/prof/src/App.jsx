@@ -50,7 +50,7 @@ function Prof() {
           setIsRecruiter(false); // It's a user
         } else {
           // If user profile fails, try fetching the recruiter profile
-          response = await fetch('http://localhost:8080/api/recruiters/profile', {
+          response = await fetch('http://localhost:8080/api/recruiter/profile', {
             method: 'GET',
             headers: {
               Authorization: `Bearer ${token}`,
@@ -121,6 +121,12 @@ function Prof() {
         <div className="recruiter-section">
           <h2>Компания</h2>
           <p>{profile.company || "Информация о компании отсутствует."}</p>
+        </div>
+      )}
+      {isRecruiter && (
+        <div className='vacancies-section'>
+            <h2>Созданные вакансии</h2>
+            <p>{profile.vacancies || "Вакансии отсутствуют"}</p>
         </div>
       )}
       <div className="social-links">
