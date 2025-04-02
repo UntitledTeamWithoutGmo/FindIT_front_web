@@ -10,7 +10,7 @@ function Vakansii() {
 }, []);*/
   useEffect(() => {
     // Используем примерные данные
-    const mockData = [
+   /* const mockData = [
       {
         title: "UI Designer",
         description: "Какая-то Контора",
@@ -30,8 +30,8 @@ function Vakansii() {
         id: 2
       },
     ];
-    setVacancies(mockData);
-    /*fetch("http://localhost:8080/api/vacancy/all")
+    setVacancies(mockData);*/
+    fetch("http://localhost:8080/api/vacancy/all")
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -42,7 +42,7 @@ function Vakansii() {
       console.log("Данные с сервера:", data); // Для отладки
       setVacancies(data);
     })
-    .catch((error) => console.error("Ошибка загрузки вакансий:", error));*/
+    .catch((error) => console.error("Ошибка загрузки вакансий:", error));
   }, []);
 
   const handleMoreDetails = (id) => {

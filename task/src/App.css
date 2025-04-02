@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+.task-section, .code-section {
+  flex: 1;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.header h2 {
+  margin: 0;
+  color: #555;
+}
+
+.task-box {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.example {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-left: 4px solid #ccc;
+  margin-top: 10px;
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.language {
+  background-color: #eee;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.code-box {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+}
+
+.code-box pre {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+}
+
+.submit-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #5be495;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.test-results {
+  margin-top: 20px;
+}
+
+.test-case {
+  padding: 6px;
+  margin: 4px 0;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.test-case.passed {
+  background-color: #e0f7e9;
+  color: green;
+}
+
+.test-case.failed {
+  background-color: #fce4e4;
+  color: red;
+}

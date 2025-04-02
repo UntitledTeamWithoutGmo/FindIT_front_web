@@ -10,6 +10,7 @@ import RegRecruiters from './apps/reg-recruiters/src/App';
 import Vakansii from './apps/vakansii/src/App';
 import MainPage from './apps/main-page/src/App';
 import AboutVacanci from './apps/about-vacanci/src/App';
+import Task from './apps/task/src/App';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/vakansii" element={<Vakansii />} />
           <Route path="/main-page" element={<MainPage />} />
           <Route path="/about-vacanci" element={<AboutVacanci />} />
+          <Route path="/task" element={<Task />} />
         </Routes>
       </div>
     </Router>
