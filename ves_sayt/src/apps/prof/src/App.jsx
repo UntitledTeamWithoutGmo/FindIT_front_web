@@ -97,7 +97,7 @@ function Prof() {
         <h2>О себе</h2>
         <p>{profile.about || "Информация о пользователе отсутствует."}</p>
       </div>
-      <div className="level-section">
+      {!isRecruiter && (<div className="level-section">
   <h2>Уровень</h2>
   <div className="level-bar">
     <span className="level-number">{profile.level}</span>
@@ -108,7 +108,7 @@ function Prof() {
       ></div>
     </div>
   </div>
-</div>
+</div>)}
       <div className="skills-section">
         <h2>Навыки</h2>
         <div className="skills">
@@ -126,7 +126,7 @@ function Prof() {
       {isRecruiter && (
         <div className='vacancies-section'>
             <h2>Созданные вакансии</h2>
-            <p>{profile.vacancies || "Вакансии отсутствуют"}</p>
+            <p>{profile.vacancies?.length > 0 ? `Количество вакансий: ${profile.vacancies.length}` : "Вакансии отсутствуют"}</p>
         </div>
       )}
       <div className="social-links">

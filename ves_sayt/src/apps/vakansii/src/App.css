@@ -343,11 +343,15 @@ body{
 
 .vacancy-card {
   display: flex;
+  flex-direction: column; /* Вертикальное расположение содержимого */
   background-image: url(./assets/ofic.jpg);
-  background-size: 100%;
+  background-size: cover; /* Масштабируем фон */
+  background-repeat: no-repeat; /* Отключаем повторение фона */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  width: 95%;
+  position: relative;
 }
 
 .vacancy-content {
@@ -355,7 +359,7 @@ body{
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; /* Равномерное распределение содержимого */
 }
 
 .vacancy-title {
@@ -406,18 +410,24 @@ body{
 .vacancy-buttons {
   display: flex;
   gap: 10px;
+  margin-top: 5px; /* Уменьшаем отступ сверху */
+}
+
+.vacancy-buttons button{
+  /*margin-bottom: 50px;*/
 }
 
 .btn1 {
   padding: 8px 12px;
   border: none;
-  width: 150px;
+  width: 120px; /* Уменьшаем ширину кнопок */
   border-radius: 15px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   color: #fff;
   font-size: 14px;
+  height: 40px; /* Уменьшаем высоту кнопок */
 }
 
 .btn1.blue {

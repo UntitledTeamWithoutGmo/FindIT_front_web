@@ -3,6 +3,7 @@ import "./App.css";
 
 function Vakansii() {
   const [vacancies, setVacancies] = useState([]);
+  const token = localStorage.getItem('token');
 /*fetch("http://localhost:8080/api/vacancy/all")
 .then((response) => response.json())
 .then((data) => setVacancies(data))
@@ -51,6 +52,29 @@ function Vakansii() {
     console.log(id);
   }
 
+const handleWork = async (id) => {
+  localStorage.setItem("id", id);
+  try {
+    const res = await fetch(`http://localhost:8080/api/vacancy/call/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      },
+    });
+
+    if (res.ok) {
+      alert('Getting new work successful!');
+    } else {
+      alert('Getting new work failed.');
+    }
+  } catch (err) {
+    console.error(err.message);
+    alert('An error occurred.');
+  }
+};
+
+
   return (
     <div className="vacancies-page">
       <header className="vacancies-header">
@@ -64,20 +88,19 @@ function Vakansii() {
             <div className="vacancy-content">
               <h2 className="vacancy-title">{vacancy.title}</h2>
               <p className="vacancy-description">{vacancy.description}</p>
-              <div className="vacancy-tags">
+              {/*<div className="vacancy-tags">
                 {vacancy.tags.map((tag, idx) => (
                   <span key={idx} className="vacancy-tag">
                     {tag}
                   </span>
                 ))}
-              </div>
-              <p className="vacancy-location">{vacancy.location}</p>
+              </div>*/}
               <div className="vacancy-footer">
                 <span className="vacancy-price">{vacancy.price}</span>
                 <div className="vacancy-buttons">
-                  <a href={`http://localhost:8080/api/vacancy/call/${vacancy.id}`} className="btn1 blue">
+                  <button onClick={() => handleWork(vacancy.id)} className="btn1 blue">
                     Отликнуться
-                  </a>
+                  </button>
                   <button onClick={() => handleMoreDetails(vacancy.id)} className="btn1 blue">
                     Подробнее
                   </button>
