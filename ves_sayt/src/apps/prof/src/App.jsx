@@ -104,7 +104,7 @@ function Prof() {
     <div className="progress-bar">
       <div
         className="progress"
-        style={{ width: `${profile.levelProgress || 100}%` }} // Adjust dynamically
+        style={{ width: `${profile.level || 100}%` }} // Adjust dynamically
       ></div>
     </div>
   </div>

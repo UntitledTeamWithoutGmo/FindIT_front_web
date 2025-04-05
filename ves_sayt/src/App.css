@@ -2,6 +2,12 @@ body{
   background: linear-gradient(to bottom, lightblue, blue);
 }
 
+.Page-buttons{
+    margin-top: 25px;
+    margin-left: 25px;
+    gap: 20px;
+}
+
 @font-face {
     font-family: "Black Wednesday";
     src: url("./fonts/Black Wednesday.otf") format("opentype");

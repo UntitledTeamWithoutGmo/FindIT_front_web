@@ -16,11 +16,21 @@ import ChooseLogin from './apps/vibor-logina/src/App';
 import ChooseReg from './apps/vibor-rega/src/App';
 import RegOrganization from './apps/reg-organizations/src/App';
 
+const Open = () => {
+  window.location.href = 'http://localhost:6001/prof';
+}
+
 function App() {
   return (
     <Router>
-      <div>
-        
+      <div className="Page-buttons">
+        <nav className='navigation'>
+          <a className="btn1 fiol" href="http://localhost:6001/main-page">Главная страница</a>
+          <a className="btn1 fiol" href="http://localhost:6001/vakansii" id="vak">Вакансии</a>
+          <a className="btn1 fiol" href="http://localhost:6001/task" id="zad">Задание</a>
+
+          <img className="profile-pictures" src='./src/assets/avatar.png' onClick={Open}/>
+        </nav>
         <Routes>
           <Route path="/log" element={<Log />} />
           <Route path="/prof" element={<Prof />} />

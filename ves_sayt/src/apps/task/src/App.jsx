@@ -4,32 +4,36 @@ import './App.css';
 function Task() {
   const [task, setTask] = useState(null); // Состояние для хранения задачи
   const [code, setCode] = useState(''); // Состояние для хранения кода
-  const [isCorrect, setIsCorrect] = useState(null); // Состояние для результата проверки
+  const [isCorrect, setIsCorrect] = useState(false); // Состояние для результата проверки
 
   const token = localStorage.getItem('token'); // Получаем токен из localStorage
-
-  useEffect(() => {
-    // Запрос к серверу для получения задачи
-    fetch('http://localhost:5000/api/code/java')
-      .then((response) => response.json())
-      .then((data) => setTask(data))
-      .catch((error) => console.error('Ошибка загрузки задачи:', error));
-  }, []);
 
   const handleSubmit = () => {
     // Отправка кода на сервер
     fetch('http://localhost:5000/api/code/java', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+      'Content-Type': 'application/json',
       },
       body: JSON.stringify({ code }),
     })
-      .then((response) => response.json())
-      .then((data) => {
-        setIsCorrect(data.correct); // Устанавливаем результат проверки
+      .then((response) => {
+      if (!response.ok) {
+        throw new Error('Ошибка сервера');
+      }
+      return response.json();
       })
-      .catch((error) => console.error('Ошибка отправки кода:', error));
+      .then((data) => {
+      if (data.correct) {
+        setIsCorrect(true); // Устанавливаем результат проверки
+      } else {
+        setIsCorrect(false);
+      }
+      })
+      .catch((error) => {
+      console.error('Ошибка отправки кода:', error);
+      setIsCorrect(null); // Скрываем кнопку при ошибке
+      });
   };
 
   const handleLevel = () => {
@@ -46,9 +50,9 @@ function Task() {
       .catch((error) => console.error('Ошибка отправки кода:', error));
   };
 
-  if (!task) {
+  /*if (!task) {
     return <p>Загрузка задачи...</p>;
-  }
+  }*/
 
   return (
     <div className="container">
@@ -58,15 +62,15 @@ function Task() {
         </div>
         <div className="task-box">
           <div className="task-header">
-            <span className="task-title">{task.name}</span>
-            <span className="task-number">Task number: {task.id}</span>
+            <span className="task-title">Sum to variables</span>
+            <span className="task-number">Task number: 1</span>
           </div>
           <div className="task-description">
-            <p>{task.description}</p>
+            <p>Надо написать клас под названием TestClass и что бы он содержал метод calculate который принимает два числа и возвращает их сумму, на языке программирования Java</p>
             <div className="example">
               <p><strong>Пример:</strong></p>
-              <p><strong>Input:</strong> {task.exampleInput}</p>
-              <p><strong>Output:</strong> {task.exampleOutput}</p>
+              <p><strong>Input:</strong>5, 3</p>
+              <p><strong>Output:</strong>8</p>
             </div>
           </div>
         </div>
@@ -85,19 +89,17 @@ function Task() {
           <button className="submit-button" onClick={handleSubmit}>
             Отправить
           </button>
-          {isCorrect !== null && (
+          {isCorrect && (
             <button className="submit-button" id="i" onClick={handleLevel}>
               Поднять Уровень
             </button>
           )}
         </div>
-        {isCorrect !== null && (
           <>
             <div className={`result-message ${isCorrect ? 'correct' : 'incorrect'}`}>
               {isCorrect ? 'Все правильно!' : 'Ошибка в коде!'}
             </div>
           </>
-        )}
       </div>
     </div>
   );
