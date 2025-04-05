@@ -27,6 +27,14 @@ function AboutVacanci() {
   }
 
   return (
+    <>
+    <div className="Page-buttons">
+        <nav className='navigation'>
+          <a className="btn1 fiol" href="http://localhost:6001/main-page">Главная страница</a>
+          <a className="btn1 fiol" href="http://localhost:6001/vakansii" id="vak">Вакансии</a>
+          <a className="btn1 fiol" href="http://localhost:6001/task" id="zad">Задание</a>
+        </nav>
+        </div>
     <div className="about-vacancy">
       <h1 className="title-vacancy">{vacancy.title}</h1>
       <p className="description-vacancy">Описание: {vacancy.description}</p>
@@ -35,6 +43,7 @@ function AboutVacanci() {
       <h2 className="price-vacancy">Зарплата: {vacancy.price}</h2>
       <button className='btn1 green'>Отликнуться</button>
     </div>
+    </>
   );
 }
 

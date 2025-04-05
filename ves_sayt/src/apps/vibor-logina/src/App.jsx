@@ -13,6 +13,14 @@ function ChooseLogin() {
 
   return (
     <>
+    <div className="Page-buttons">
+        <nav className='navigation'>
+          <a className="btn1 fiol" href="http://localhost:6001/main-page">Главная страница</a>
+          <a className="btn1 fiol" href="http://localhost:6001/vakansii" id="vak">Вакансии</a>
+          <a className="btn1 fiol" href="http://localhost:6001/task" id="zad">Задание</a>
+
+        </nav>
+        </div>
       <div className="ViborLogin">
         <h1 className='text'>Как вы хотите войти?</h1>
           <button className="btn-choose" id="user" onClick={handleClickUser}>Как обычный пользователь</button>

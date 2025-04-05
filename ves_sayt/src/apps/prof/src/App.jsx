@@ -85,6 +85,14 @@ function Prof() {
   }
 
   return (
+    <>
+    <div className="Page-buttons">
+        <nav className='navigation'>
+          <a className="btn1 fiol" href="http://localhost:6001/main-page">Главная страница</a>
+          <a className="btn1 fiol" href="http://localhost:6001/vakansii" id="vak">Вакансии</a>
+          <a className="btn1 fiol" href="http://localhost:6001/task" id="zad">Задание</a>
+        </nav>
+        </div>
     <div className="Profile">
       <div className="header">
         <div className="ramka"></div>
@@ -133,6 +141,7 @@ function Prof() {
             <button className='btn' onClick={() => window.location.href = 'http://localhost:6001/create-vacanci'}>Создать вакансию</button>
       )}
     </div>
+    </>
   );
 }
 

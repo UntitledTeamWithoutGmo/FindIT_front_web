@@ -55,6 +55,14 @@ function Task() {
   }*/
 
   return (
+    <>
+    <div className="Page-buttons">
+        <nav className='navigation'>
+          <a className="btn1 fiol" href="http://localhost:6001/main-page">Главная страница</a>
+          <a className="btn1 fiol" href="http://localhost:6001/vakansii" id="vak">Вакансии</a>
+          <a className="btn1 fiol" href="http://localhost:6001/task" id="zad">Задание</a>
+        </nav>
+        </div>
     <div className="container">
       <div className="task-section">
         <div className="header">
@@ -102,6 +110,7 @@ function Task() {
           </>
       </div>
     </div>
+    </>
   );
 }
 

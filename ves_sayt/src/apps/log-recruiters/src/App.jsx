@@ -43,6 +43,13 @@ function LogRecruiters() {
 
   return (
     <>
+    <div className="Page-buttons">
+        <nav className='navigation'>
+          <a className="btn1 fiol" href="http://localhost:6001/main-page">Главная страница</a>
+          <a className="btn1 fiol" href="http://localhost:6001/vakansii" id="vak">Вакансии</a>
+          <a className="btn1 fiol" href="http://localhost:6001/task" id="zad">Задание</a>
+        </nav>
+        </div>
       {/*<div className="head">
         <div className="nav">
           Find It

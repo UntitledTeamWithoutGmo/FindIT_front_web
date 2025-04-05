@@ -45,17 +45,13 @@ function CreateVacancy() {
 
   return (
     <>
-      {/* <div className="head">
-        <div className="nav">
-          Find It
-          <a href="" className="u">Home</a>
-          <a href="" className="k">Your Profile</a>
-          <a href="" className="k">Registation</a>
-          <a href="" className="k">Login</a>
-          <a href="" className="k">For recruiters</a>
+      <div className="Page-buttons">
+        <nav className='navigation'>
+          <a className="btn1 fiol" href="http://localhost:6001/main-page">Главная страница</a>
+          <a className="btn1 fiol" href="http://localhost:6001/vakansii" id="vak">Вакансии</a>
+          <a className="btn1 fiol" href="http://localhost:6001/task" id="zad">Задание</a>
+        </nav>
         </div>
-      </div> */}
-      <br />
       <div className="create-vacancy">
         <form onSubmit={handleSubmit}>
           <p className="text">Создайте Вакансию</p>
