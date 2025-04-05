@@ -6,7 +6,7 @@ function Prof() {
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
   const [isRecruiter, setIsRecruiter] = useState(false); // To differentiate between user and recruiter
-
+  const token = localStorage.getItem('token');
   /*// Mock data for testing the visual design
   const mockProfile = {
     name: 'Иван',
@@ -28,7 +28,7 @@ function Prof() {
 
   useEffect(() => {
     const fetchProfile = async () => {
-      const token = localStorage.getItem('token');
+      
 
       if (!token) {
         window.location.href = 'index.html';
@@ -95,7 +95,7 @@ function Prof() {
       </div>
       <div className="about-section">
         <h2>О себе</h2>
-        <p>{profile.about || "Информация о пользователе отсутствует."}</p>
+        <p>{profile.description || "Информация о пользователе отсутствует."}</p>
       </div>
       {!isRecruiter && (<div className="level-section">
   <h2>Уровень</h2>
@@ -104,7 +104,7 @@ function Prof() {
     <div className="progress-bar">
       <div
         className="progress"
-        style={{ width: `${profile.levelProgress || 70}%` }} // Adjust dynamically
+        style={{ width: `${profile.levelProgress || 100}%` }} // Adjust dynamically
       ></div>
     </div>
   </div>
@@ -112,15 +112,15 @@ function Prof() {
       <div className="skills-section">
         <h2>Навыки</h2>
         <div className="skills">
-          {profile.skills?.map((skill, index) => (
-            <span key={index} className="skill">{skill}</span>
+          {profile.stackTech?.map((stackTech, index) => (
+            <span key={index} className="skill">{stackTech}</span>
           )) || <p>Навыки не указаны.</p>}
         </div>
       </div>
       {isRecruiter && (
         <div className="recruiter-section">
           <h2>Компания</h2>
-          <p>{profile.company || "Информация о компании отсутствует."}</p>
+          <p>{profile.organizationName || "Информация о компании отсутствует."}</p>
         </div>
       )}
       {isRecruiter && (
@@ -129,12 +129,9 @@ function Prof() {
             <p>{profile.vacancies?.length > 0 ? `Количество вакансий: ${profile.vacancies.length}` : "Вакансии отсутствуют"}</p>
         </div>
       )}
-      <div className="social-links">
-        <h2>Соцсети</h2>
-        <div className="links">
-          <h3>links</h3>
-        </div>
-      </div>
+      {isRecruiter && (
+            <button className='btn' onClick={() => window.location.href = 'http://localhost:6001/create-vacanci'}>Создать вакансию</button>
+      )}
     </div>
   );
 }

@@ -7,42 +7,6 @@ body{
   font-family: Arial, sans-serif; /* Change font to a simpler style */
 }
 
-.head{
-    background-color: #f1f0f0;
-    height: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: flex-start;
-    padding-left: 20px;
-    border-bottom: 1px solid #d8d8d8;
-    font-family: "Champagne Royale";
-    font-size: 25px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    gap: 20px;
-}
-
-.head a:hover{
-    text-decoration: underline;
-}
-
-.head a{
-    text-decoration: none;
-    color: #000;
-}
-
-.u{
-    margin-left: 50px;
-}
-
-.k{
-    margin-left: 15px;
-}
-
 .Login{
     background-color: #fff;
   padding: 20px;

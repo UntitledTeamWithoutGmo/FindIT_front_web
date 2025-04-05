@@ -7,6 +7,8 @@ function Reg() {
     username: '',
     surname: '',
     patronymicName: '',
+    description: '',
+    stackTech: '',
     email: '',
     password: '',
   });
@@ -94,6 +96,22 @@ function Reg() {
             value={formData.patronymicName}
             onChange={handleChange}
             required
+          />
+          <input
+            type="text"
+            className="input"
+            id="description"
+            placeholder="О себе (необязательно)"
+            value={formData.description}
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            className="input"
+            id="stackTech"
+            placeholder="Стеки (через запятую, необязательно)"
+            value={formData.stackTech}
+            onChange={handleChange}
           />
           <input
             type="email"

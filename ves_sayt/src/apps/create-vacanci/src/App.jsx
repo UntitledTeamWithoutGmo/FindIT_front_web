@@ -1,35 +1,105 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import { useState } from 'react';
 
-function App() {
-  const [count, setCount] = useState(0)
+const token = localStorage.getItem('token');
+
+function CreateVacancy() {
+  const [formData, setFormData] = useState({
+    title: '',
+    description: '',
+    price: '',
+    tasklink: '',
+  });
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch('http://localhost:8080/api/vacancy/create', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        alert('Vacancy making successful!');
+      } else {
+        alert('Vacancy making failed.');
+      }
+    } catch (err) {
+      console.error(err.message);
+      alert('An error occurred.');
+    }
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      {/* <div className="head">
+        <div className="nav">
+          Find It
+          <a href="" className="u">Home</a>
+          <a href="" className="k">Your Profile</a>
+          <a href="" className="k">Registation</a>
+          <a href="" className="k">Login</a>
+          <a href="" className="k">For recruiters</a>
+        </div>
+      </div> */}
+      <br />
+      <div className="create-vacancy">
+        <form onSubmit={handleSubmit}>
+          <p className="text">Создайте Вакансию</p>
+          <input
+            type="text"
+            className="input"
+            id="title"
+            placeholder="Название вакансии"
+            value={formData.title}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="text"
+            className="input"
+            id="description"
+            placeholder="Описание вакансии"
+            value={formData.description}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="text"
+            className="input"
+            id="price"
+            placeholder="Зарплата/стоимость (укажите валюту)"
+            value={formData.price}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="text"
+            className="input"
+            id="tasklink"
+            placeholder="Ссылка на задание (если есть)"
+            value={formData.tasklink}
+            onChange={handleChange}
+          />
+          <button className="btn" type="submit">Создать</button>
+          <div className="mini-text">© 2025 FindIt</div>
+        </form>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default CreateVacancy;

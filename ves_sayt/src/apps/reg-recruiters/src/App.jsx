@@ -7,6 +7,8 @@ function RegRecruiters() {
     username: '',
     surname: '',
     patronymicName: '',
+    description: '',
+    stackTech: '',
     email: '',
     password: '',
     organizationName: '',
@@ -24,7 +26,7 @@ function RegRecruiters() {
     e.preventDefault();
 
     try {
-      const res = await fetch('http://localhost:8080/api/recruiters/register', {
+      const res = await fetch('http://localhost:8080/api/recruiter/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -97,6 +99,22 @@ function RegRecruiters() {
             required
           />
           <input
+            type="text"
+            className="input"
+            id="description"
+            placeholder="О себе (необязательно)"
+            value={formData.description}
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            className="input"
+            id="stackTech"
+            placeholder="Стеки (через запятую, необязательно)"
+            value={formData.stackTech}
+            onChange={handleChange}
+          />
+          <input
             type="email"
             className="input"
             id="email"
@@ -117,10 +135,11 @@ function RegRecruiters() {
           <input
             type="text"
             className="input"
-            id="OrganizationName"
+            id="organizationName"
             placeholder="Название Организации"
             value={formData.organizationName}
             onChange={handleChange}
+            required
           />
           <button className="btn" type="submit">Зарегистрироваться</button>
           {/*<div className="have login">

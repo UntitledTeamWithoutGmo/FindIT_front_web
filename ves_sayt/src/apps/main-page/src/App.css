@@ -6,70 +6,6 @@ body{ background-image: url(./assets/gradient.png);
   margin: 0; 
 }
 
-.head{
-    background-color: #f1f0f0;
-    height: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: flex-start;
-    padding-left: 20px;
-    border-bottom: 1px solid #d8d8d8;
-    font-family: "Champagne Royale";
-    font-size: 25px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    gap: 20px;
-}
-
-.head a:hover{
-    text-decoration: underline;
-}
-
-.head a{
-    text-decoration: none;
-    color: #000;
-}
-
-.u{
-    margin-left: 50px;
-}
-
-.k{
-    margin-left: 15px;
-}
-
-.Login{
-    background-color: #fff;
-  padding: 20px;
-  width: 70%;
-  max-width: 500px;
-  height: 550px;
-  max-height: 550px;
-  min-height: 400px;
-  display: grid;
-  align-items: center;
-  margin: auto auto;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better appearance */
-}
-
-.Profile {
-  width: 100%; /* Make the profile container take the full width */
-  height: 100vh; /* Make the profile container take the full height of the viewport */
-  margin: 0; /* Remove any margin */
-  background: #fff;
-  border-radius: 0; /* Remove border radius for a full-screen layout */
-  box-shadow: none; /* Remove shadow for a cleaner look */
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .fgtext{
   color: #ffffff;
   margin-left: 30px;
@@ -90,320 +26,7 @@ body{ background-image: url(./assets/gradient.png);
   margin-left: 450px;
 }
 
-.header {
-  text-align: center;
-  position: relative;
-  width: 100%; /* Stretch the header across the full width */
-}
-
-.header img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-.ramka {
-  background-color: #009dff;
-  height: 150px; /* Increase height for better visual impact */
-  width: 100%; /* Stretch the blue bar across the full width */
-}
-
-.profile-picture {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-top: -75px;
-  border: 5px solid #fff;
-}
-
-.text-profile {
-  font-size: 28px; /* Increase font size for better visibility */
-  font-weight: bold;
-  margin: 10px 0;
-}
-
-.about-section,
-.skills-section,
-.social-links,
-.level-section {
-  width: 90%; /* Make sections take most of the screen width */
-  max-width: 1200px; /* Limit the width for very large screens */
-  margin: 20px auto;
-}
-
-.about-section h2,
-.skills-section h2,
-.social-links h2,
-.level-section h2 {
-  font-size: 24px; /* Increase section title font size */
-  margin-bottom: 10px;
-}
-
-.about-section p {
-  font-size: 18px; /* Increase font size for better readability */
-  color: #333;
-  line-height: 1.6;
-}
-
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px; /* Increase spacing between skill badges */
-}
-
-.skill {
-  background-color: #e1ecf4;
-  color: #0366d6;
-  padding: 8px 12px; /* Increase padding for larger badges */
-  border-radius: 5px;
-  font-size: 16px; /* Slightly larger font for skill badges */
-}
-
-.recruiter-section {
-  margin: 20px 0;
-}
-
-.recruiter-section h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.recruiter-section p {
-  font-size: 16px;
-  color: #586069;
-}
-
-.social-links {
-  text-align: center;
-}
-
-.social-links .links {
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* Increase spacing between social icons */
-}
-
-.social-links .links a {
-  display: inline-block;
-  width: 50px; /* Larger social icons */
-  height: 50px;
-  background-color: #e1ecf4;
-  color: #0366d6;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  font-size: 20px; /* Larger font for icons */
-  transition: background-color 0.3s ease;
-}
-
-.social-links .links a:hover {
-  background-color: #0366d6;
-  color: #fff;
-}
-
-.loading,
-.error {
-  text-align: center;
-  font-size: 18px;
-  color: #555;
-  margin-top: 50px;
-}
-
-.level-section {
-  text-align: center;
-}
-
-.level-bar {
-  display: flex;
-  align-items: center;
-  gap: 15px; /* Increase spacing between level number and progress bar */
-  justify-content: center;
-}
-
-.level-bar .level-number {
-  font-size: 20px; /* Larger font for level number */
-  font-weight: bold;
-  color: #0366d6;
-}
-
-.level-bar .progress-bar {
-  width: 400px; /* Wider progress bar */
-  height: 15px; /* Taller progress bar */
-  background-color: #e1ecf4;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-}
-
-.level-bar .progress-bar .progress {
-  height: 100%;
-  background-color: #0366d6;
-  width: 70%; /* Adjust dynamically based on the user's level */
-}
-
-.Registration{
-  background-color: #fff;
-  padding: 20px;
-  width: 70%;
-  max-width: 500px;
-  height: 100%;
-  max-height: 550px;
-  min-height: 400px;
-  display: grid;
-  align-items: center;
-  margin: auto auto;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better appearance */
-}
-
-.text{
-    font-size: 17px;
-    font-weight: normal;
-    color: #000;
-    font-family: Arial; /* Use a different font */
-    text-align: center;
-    margin-top: 30px;
-}
-
-.input{
-    width: 55%;
-    height: 40px;
-    margin-top: 25px;
-    display: grid;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 2px;
-    border: 1px solid #ccc;
-    padding: 0 10px;
-    font-size: 14px;
-}
-
-#username{
-    margin-top: 5px;
-}
-
-.btn{
-    width: 70%;
-    height: 45px;
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    border-radius: 20px;
-    border: 1px solid#54b7fd;
-    background-color: #54b7fd;
-    color: #fff;
-    font-weight: normal;
-    font-size: 20px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.vacancies-container {
-  padding: 20px;
-  font-family: Arial, sans-serif;
-}
-
-.vacancies-page {
-  padding: 20px;
-}
-
-.vacancies-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.vacancies-header h1 {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.vacancies-header p {
-  font-size: 16px;
-  color: #555;
-}
-
-.vacancies-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.vacancy-card {
-  display: flex;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-.vacancy-image {
-  width: 200px;
-  height: 150px;
-  object-fit: cover;
-}
-
-.vacancy-content {
-  padding: 15px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.vacancy-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.vacancy-description {
-  font-size: 14px;
-  color: #777;
-  margin: 5px 0;
-}
-
-.vacancy-tags {
-  display: flex;
-  gap: 10px;
-  margin: 10px 0;
-}
-
-.vacancy-tag {
-  background-color: #e1ecf4;
-  color: #0366d6;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 12px;
-}
-
-.vacancy-location {
-  font-size: 14px;
-  color: #555;
-}
-
-.vacancy-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.vacancy-price {
-  font-size: 16px;
-  font-weight: bold;
-  color: #009dff;
-}
-
-.vacancy-buttons {
+.vacancys-buttons {
   display: grid;
   gap: 10px;
   justify-content: center;
@@ -422,39 +45,35 @@ body{ background-image: url(./assets/gradient.png);
   color: #fff;
   font-size: 14px;
   width: 250px;
-  height: 25px;
+  height: 45px;
 }
 
 .btn1.blue {
   background-color: #009dff;
+  width: 250px;
+  height: 45px;
 }
 
 .btn1.green {
   background-color: #28a745;
+  width: 250px;
+  height: 45px;
 }
 
 .btn1.brown {
   background-color: #a97c32;
+  width: 250px;
+  height: 45px;
+}
+
+.btn1.fiol{
+  background-color: #bf8acd;
+  width: 250px;
+  height: 45px;
 }
 
 .btn1:hover {
   opacity: 0.9;
-}
-
-.btn:hover{
-    background-color: #54b7fd;
-    color: #ffffff;
-}
-
-.mini-text{
-    font-size: 14px;
-    text-align: center;
-    margin-top: 15px;
-    color: #747373;
-}
-
-#y{
-  text-align: left;
 }
 
 @font-face {

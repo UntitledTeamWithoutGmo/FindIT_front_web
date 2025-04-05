@@ -102,6 +102,10 @@ body {
   font-weight: bold;
 }
 
+#i{
+  margin-right: 200px;
+}
+
 .test-results {
   margin-top: 20px;
 }
@@ -121,6 +125,25 @@ body {
 .test-case.failed {
   background-color: #fce4e4;
   color: red;
+}
+
+.result-message {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.result-message.correct {
+  background-color: #e0f7e9;
+  color: #28a745;
+}
+
+.result-message.incorrect {
+  background-color: #fce4e4;
+  color: #dc3545;
 }
 
 @font-face {

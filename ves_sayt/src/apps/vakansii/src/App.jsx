@@ -4,6 +4,7 @@ import "./App.css";
 function Vakansii() {
   const [vacancies, setVacancies] = useState([]);
   const token = localStorage.getItem('token');
+  
 /*fetch("http://localhost:8080/api/vacancy/all")
 .then((response) => response.json())
 .then((data) => setVacancies(data))

@@ -11,12 +11,16 @@ import Vakansii from './apps/vakansii/src/App';
 import MainPage from './apps/main-page/src/App';
 import AboutVacanci from './apps/about-vacanci/src/App';
 import Task from './apps/task/src/App';
+import CreateVacancy from './apps/create-vacanci/src/App';
+import ChooseLogin from './apps/vibor-logina/src/App';
+import ChooseReg from './apps/vibor-rega/src/App';
+import RegOrganization from './apps/reg-organizations/src/App';
 
 function App() {
   return (
     <Router>
       <div>
-    
+        
         <Routes>
           <Route path="/log" element={<Log />} />
           <Route path="/prof" element={<Prof />} />
@@ -27,6 +31,10 @@ function App() {
           <Route path="/main-page" element={<MainPage />} />
           <Route path="/about-vacanci" element={<AboutVacanci />} />
           <Route path="/task" element={<Task />} />
+          <Route path="/create-vacanci" element={<CreateVacancy />} />
+          <Route path="/vibor-logina" element={<ChooseLogin />} />
+          <Route path="/vibor-rega" element={<ChooseReg />} />
+          <Route path="/reg-organizations" element={<RegOrganization />} />
         </Routes>
       </div>
     </Router>

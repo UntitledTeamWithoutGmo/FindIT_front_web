@@ -30,9 +30,10 @@ function AboutVacanci() {
     <div className="about-vacancy">
       <h1 className="title-vacancy">{vacancy.title}</h1>
       <p className="description-vacancy">Описание: {vacancy.description}</p>
-      <p className="company">Организация: {vacancy.organizationName}</p>
+      <p className="company">Организация: {vacancy.organization}</p>
+      <p className="company">Создал: {vacancy.recruiter}</p>
       <h2 className="price-vacancy">Зарплата: {vacancy.price}</h2>
-      <a href='btn1 green'>Отликнуться</a>
+      <button className='btn1 green'>Отликнуться</button>
     </div>
   );
 }
