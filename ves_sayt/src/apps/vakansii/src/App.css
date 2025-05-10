@@ -1,0 +1,174 @@
+body{
+  background-color: #ffffff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: Arial, sans-serif; /* Change font to a simpler style */
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.vacancies-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.vacancies-page {
+  padding: 20px;
+}
+
+.vacancies-header {
+  display: grid;
+  /*justify-content: space-between;*/
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.vacancies-header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+.vacancies-header p {
+  font-size: 16px;
+  color: #555;
+  text-align: right;
+}
+
+.vacancies-header hr {
+  width: 100%;
+  color: #555;
+}
+
+.vacancies-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vacancy-card {
+  display: flex;
+  flex-direction: column; /* Вертикальное расположение содержимого */
+  background-image: url(./assets/ofic.jpg);
+  background-size: cover; /* Масштабируем фон */
+  background-repeat: no-repeat; /* Отключаем повторение фона */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+  position: relative;
+}
+
+.vacancy-content {
+  padding: 15px;
+  flex: 1;
+  display: grid; /* Равномерное распределение содержимого */
+}
+
+.vacancy-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  color: #fff;
+}
+
+.vacancy-description {
+  font-size: 14px;
+  color: #777;
+  margin: 5px 0;
+}
+
+.vacancy-tags {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.vacancy-tag {
+  background-color: #e1ecf4;
+  color: #0366d6;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.vacancy-location {
+  font-size: 14px;
+  color: #555;
+}
+
+.vacancy-footer {
+  display: grid;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.vacancy-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #009dff;
+}
+
+.vacancy-buttons {
+  display: grid; 
+  justify-content: right;
+  gap: 10px;
+  width: 100%; /* Уменьшаем ширину кнопок */
+}
+
+.vacancy-buttons button{
+  /*margin-bottom: 50px;*/
+}
+
+.btn1 {
+  padding: 8px 12px;
+  border: none;
+  width: 120px; /* Уменьшаем ширину кнопок */
+  border-radius: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  height: 40px; /* Уменьшаем высоту кнопок */
+}
+
+.btn1.blue {
+  background-color: #1100ff;
+}
+
+.btn1.green {
+  background-color: #28a745;
+}
+
+.btn1:hover {
+  opacity: 0.9;
+}
+
+@font-face {
+    font-family: "Black Wednesday";
+    src: url("./fonts/Black Wednesday.otf") format("opentype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "KZ Supercell-Magic";
+    src: url("./fonts/KZ Supercell-Magic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 4S00;
+}
+
+@font-face {
+    font-family: "Champagne Royale";
+    src: url("./fonts/Champagne Royale.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}

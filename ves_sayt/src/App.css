@@ -1,0 +1,30 @@
+body{
+  background: linear-gradient(to bottom, lightblue, blue);
+}
+
+.Page-buttons{
+    margin-top: 25px;
+    margin-left: 25px;
+    gap: 20px;
+}
+
+@font-face {
+    font-family: "Black Wednesday";
+    src: url("./fonts/Black Wednesday.otf") format("opentype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "KZ Supercell-Magic";
+    src: url("./fonts/KZ Supercell-Magic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 4S00;
+}
+
+@font-face {
+    font-family: "Champagne Royale";
+    src: url("./fonts/Champagne Royale.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}

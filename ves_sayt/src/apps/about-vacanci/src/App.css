@@ -1,0 +1,111 @@
+body{ background-color: #ffffff;
+  background-size: cover; /* Масштабирует изображение, чтобы оно занимало весь экран */
+  background-repeat: no-repeat; /* Отключает повторение изображения */
+  background-position: center; /* Центрирует изображение */
+  height: 100vh; /* Устанавливает высоту на весь экран */
+  margin: 0; 
+}
+
+.fgtext{
+  color: #ffffff;
+  margin-left: 30px;
+}
+
+.hgtext{
+  color: #ffffff;
+  font-size: 20px;
+  font-family: "Roboto-serif";
+  margin-left: 250px;
+}
+
+#hg{
+  margin-left: 350px;
+}
+
+#fg{
+  margin-left: 450px;
+}
+
+.about-vacancy{
+  width: 50%;
+  height: 100%;
+  min-height: 300px;
+  background-color: #ffffff;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  margin: 52px auto;
+  padding-top: 10px;
+  padding-left: 25px;
+}
+
+.description-vacancy{
+  margin-top: 20px;
+}
+
+.price-vacancy{
+  margin-top: 30px;
+}
+
+.btn1 {
+  padding: 12px 12px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  width: 250px;
+  height: 45px;
+}
+
+.btn1.blue {
+  background-color: #009dff;
+  width: 250px;
+  height: 45px;
+}
+
+.btn1.green {
+  background-color: #28a745;
+  width: 250px;
+  height: 45px;
+}
+
+.btn1.brown {
+  background-color: #a97c32;
+  width: 250px;
+  height: 45px;
+}
+
+.btn1:hover {
+  opacity: 0.9;
+}
+
+@font-face {
+    font-family: "Black Wednesday";
+    src: url("./fonts/Black Wednesday.otf") format("opentype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "KZ Supercell-Magic";
+    src: url("./fonts/KZ Supercell-Magic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 4S00;
+}
+
+@font-face {
+    font-family: "Champagne Royale";
+    src: url("./fonts/Champagne Royale.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto-serif";
+  src: url("./fonts/variable/RobotoSerif-Italic[GRAD\,opsz\,wdth\,wght].ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
